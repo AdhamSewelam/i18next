@@ -24,7 +24,7 @@ function App() {
       <Container>
         <Dropdown>
           <Dropdown.Toggle variant="success" id="dropdown-basic">
-            {locales[i18n.language].title}
+            {locales[i18n.language]?.title}
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
@@ -33,7 +33,7 @@ function App() {
                 key={lang}
                 onClick={() => i18n.changeLanguage(lang)}
               >
-                {locales[lang].title}
+                {locales[lang]?.title}
               </Dropdown.Item>
             ))}
           </Dropdown.Menu>
